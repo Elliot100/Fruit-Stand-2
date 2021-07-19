@@ -8,7 +8,7 @@ const reducer = (oldState = _defaultState, action) => {
   {
     case "ADD_FRUIT":
       return {
-        fruits: [...oldState, action.fruits]
+        fruits: [...oldState.fruits, action.fruit]
       }
     case "CLEAR":
       return _defaultState;
