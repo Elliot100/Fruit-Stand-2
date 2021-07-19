@@ -6,6 +6,13 @@ const mapStateToProps = (state) => ({
   fruits: state.fruits
 });
 
+const mapDispatchToProps = dispatch => ({
+  addApple: () => dispatch(addApple()),
+  addOrange: () => dispatch(addOrange()),
+  clear: () => dispatch(clear())
+})
+
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(FruitStand);
